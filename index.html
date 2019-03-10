@@ -26,13 +26,14 @@
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     border-radius: 20px;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 30% 70%;
   }
   .card_container:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   .card_section1 {
     background: url('https://polarvectors.com/wp-content/uploads/2018/01/Vibrant-Universe-Creator-pin2.jpg');
-    width: 30%;
     height: 100%;
     background-size: cover;
     display: flex;
@@ -53,19 +54,38 @@
   }
   .login_button {
   }
-  .signup_button {
-
+  .signin_button {
   }
+  .card_section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .card_login {
+    width: 90px;
+    height: 60px;
+    background: pink;
+  }
+  .card_signin {
+    width: 90px;
+    height: 60px;
+    background: yellow;
+  }
+
 </style>
 <body>
   <div class="card_container">
     <div class="card_section1">
       <div class="buttons_container">
         <button class="button_register login_button">Iniciar Sesión</button>
-        <button class="button_register signup_button">Registrarse</button>
+        <button class="button_register signin_button">Registrarse</button>
       </div>
     </div>
-    <div></div>
+    <div class="card_section2">
+      <div class="card_login"></div>
+      <div class="card_signin"></div>
+    </div>
   </div>
 </body>
 </html>
