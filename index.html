@@ -66,25 +66,42 @@
     width: 90px;
     height: 60px;
     background: pink;
+    display: block;
   }
   .card_signin {
     width: 90px;
     height: 60px;
     background: yellow;
+    display: none;
+    position: absolute;
   }
-
-</style>
+  .hidden {
+    display: none;
+  }
+</style> 
+<script> 
+  function onClickLogin() {
+    var cardSignin = document.getElementById("card_signin");
+    cardSignin.style.display = "none";
+  }
+  function onClickSignin() {
+    var cardSignin = document.getElementById("card_signin");
+    cardSignin.style.display = "block";
+  }
+</script>
 <body>
   <div class="card_container">
     <div class="card_section1">
       <div class="buttons_container">
-        <button class="button_register login_button">Iniciar Sesión</button>
-        <button class="button_register signin_button">Registrarse</button>
+        <button class="button_register login_button" onclick="onClickLogin()">Iniciar Sesión</button>
+        <button class="button_register signin_button" onclick="onClickSignin()">Registrarse</button>
       </div>
     </div>
     <div class="card_section2">
-      <div class="card_login"></div>
-      <div class="card_signin"></div>
+      <div class="card_login" id="card_login">
+        
+      </div>
+      <div class="card_signin" id="card_signin"></div>
     </div>
   </div>
 </body>
