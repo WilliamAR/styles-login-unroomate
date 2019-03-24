@@ -33,7 +33,7 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   .card_section1 {
-    background: url('https://polarvectors.com/wp-content/uploads/2018/01/Vibrant-Universe-Creator-pin2.jpg');
+    background: url('./init_room.jpg');
     height: 100%;
     background-size: cover;
     display: flex;
@@ -52,10 +52,6 @@
     margin-bottom: 0.5em;
     border: 1px solid white;
   }
-  .login_button {
-  }
-  .signin_button {
-  }
   .card_section2 {
     display: flex;
     justify-content: center;
@@ -65,24 +61,28 @@
   .card_login {
     width: 100%;
     height: 100%;
-    background: pink;
+    background: white;
     display: block;
     grid-column: 2;
   }
   .card_login img {
     display: flex;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 65px;
+    margin-bottom: 75px;
   }
   .card_login form {
     display: flex;
     flex-direction: column;
     padding: 8% 20% 20% 20%;
   }
+  .card_login input {
+    margin-top: -10px;
+  }
   .card_signin {
     width: 100%;
     height: 100%;
-    background: yellow;
+    background: white;
     display: none;
     position: absolute;
     grid-column: 2;
@@ -90,16 +90,53 @@
   .card_signin img {
     display: flex;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 65px;
+    margin-bottom: 10px;
   }
   .card_signin form {
     display: flex;
     flex-direction: column;
     padding: 8% 20% 20% 20%;
   }
-
+  .card_signin input {
+    margin-top: -10px;
+  }
+  /* Global styles */
+  button {
+    cursor: pointer;
+  }
+  button:active, button:focus {
+    outline: none;
+    background: white;
+  }
+  input[type=submit] {
+    background: #E51B23;
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    height: 25px;
+    margin-top: 20px;
+  }
+  input[type=submit]:hover {
+    cursor: pointer;
+  }
+  input[type=submit]:active, input[type=submit]:focus {
+    outline: none;
+  }
+  input[type=text] {
+    border: none;
+    border-bottom: 1px solid rgba(229, 27, 35, 0.45);
+  }
+  input[type=text]:active, input[type=text]:focus {
+    outline: none;
+  }
+  /* Media Queries - Responsive */
   @media (max-width: 600px) {
     .card_login img {
+      width: 150px;
+    }
+    .card_signin img {
       width: 150px;
     }
     .button_register {
@@ -130,21 +167,21 @@
       <div class="card_login" id="card_login">
         <img src="./unroomate.png" alt="">
         <form action="/action_page.php">
-          Correo: <input type="text" name="email" value="hola@mundo.com"><br>
-          Contraseña: <input type="text" name="password" value="1234"><br>
+          <input type="text" name="email" placeholder="Email"><br>
+          <input type="text" name="password" placeholder="Password"><br>
           <input type="submit" value="Ingresar">
           </form>
       </div>
       <div class="card_signin" id="card_signin">
         <img src="./unroomate.png" alt="">
         <form action="/action_page.php">
-          Nombre: <input type="text" name="First Name" value="Gil"><br>
-          Apellido: <input type="text" name="Last Name" value="Berto"><br>
-          Telefono: <input type="text" name="Phone" value="3009587642"><br>
-          Genero: <input type="text" name="Gender" value="M"><br>
-          Fecha de nacimiento: <input type="text" name="Born" value="24/06/1995"><br>
-          Correo: <input type="text" name="Email" value="hola@mundo.com"><br>
-          Contraseña: <input type="text" name="Password" value="1234"><br>
+          <input type="text" name="First Name" placeholder="Name"><br>
+          <input type="text" name="Last Name" placeholder="Last Name"><br>
+          <input type="text" name="Phone" placeholder="Phone"><br>
+          <input type="text" name="Gender" placeholder="Gender"><br>
+          <input type="text" name="Born" placeholder="Born"><br>
+          <input type="text" name="Email" placeholder="Email"><br>
+          <input type="text" name="Password" placeholder="Password"><br>
           <input type="submit" value="Registrar">
         </form>
       </div>
